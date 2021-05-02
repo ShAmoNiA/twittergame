@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from rest_framework.authtoken.models import Token
 
 from .serializers import likesClassSerializer
 from .models import likesClass
@@ -33,6 +34,9 @@ class replayClassViewSet(viewsets.ModelViewSet):
 @api_view(('GET','DELETE','PATCH'))
 def Posts(request):
     if request.method == 'GET':
+        token = Token.objects.get(uesr=user[0])
+        print(token)
+        print("1")
         User = request.GET["UserName"]
         if(postClass.objects.filter(UserName=User).count() != 0):
             snippets = postClass.objects.filter(UserName=User)
