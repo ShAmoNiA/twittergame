@@ -16,18 +16,16 @@ from .models import postClass
 from .serializers import replayClassSerializer
 from .models import replayClass
 
+
 class likesClassViewSet(viewsets.ModelViewSet):
-    # postClass.objects.all().delete()
     queryset = likesClass.objects.all().order_by('PostId')
     serializer_class = likesClassSerializer
 
 class postClassViewSet(viewsets.ModelViewSet):
-    # postClass.objects.all().delete()
     queryset = postClass.objects.all().order_by('message')
     serializer_class = postClassSerializer
 
 class replayClassViewSet(viewsets.ModelViewSet):
-    # replayClass.objects.all().delete()
     queryset = replayClass.objects.all().order_by('mainPost')
     serializer_class = replayClassSerializer
 
