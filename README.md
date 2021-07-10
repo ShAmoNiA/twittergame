@@ -35,7 +35,7 @@ python3 -m venv YOUR_ENVIREMENT_NAME ( example : python3 -m venv env )
 
 #### Enviremant activation
 ```sh
-> $ .\YOUR_ENVIREMENT_NAME\Scripts\activate ( example : env\Scripts\activate)
+> .\YOUR_ENVIREMENT_NAME\Scripts\activate ( example : env\Scripts\activate)
 ```
 
 ## Requirements
